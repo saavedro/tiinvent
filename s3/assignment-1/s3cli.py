@@ -7,27 +7,14 @@ import boto3
 from botocore.exceptions import ClientError
 
 def s3_list_bucket(bucket_name):
-    #https://stackoverflow.com/questions/30249069/listing-contents-of-a-bucket-with-boto3
-    s3 = boto3.resource('s3')
-    bucket = s3.Bucket(bucket_name)
-
-    for s3_object in bucket.objects.all():
-        print(s3_object)
+    logging.info("TODO: Listing content of bucket {}".format(bucket_name))
 
 def s3_download_file(filename, bucket_name, object_name):
-    #https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-download-file.html
-    s3 = boto3.client('s3')
-    s3.download_file(bucket_name, object_name, filename)
+    logging.info("TODO: Downloading s3://{}/{} object as {}".format(bucket_name, object_name, filename))
 
 def s3_upload_file(filename, bucket_name, object_name):
-    # https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-uploading-files.html
-    s3_client = boto3.client('s3')
-    try:
-        response = s3_client.upload_file(filename, bucket_name, object_name)
-    except ClientError as e:
-        logging.error(e)
-        return False
-    return True
+    logging.info("TODO: Uploading file {} as s3://{}/{}".format(filename, bucket_name, object_name))
+
 
 if __name__ == "__main__":
 
