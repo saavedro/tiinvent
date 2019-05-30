@@ -1,4 +1,23 @@
 #!/usr/bin/env python
+"""
+    Cloud Storage - Assignment 1
+    Using official SDK for python (boto3) implement basic s3 comman line interface.
+
+    Tool is capable of
+    - listing files for given bucket:
+            s3cli ls my_bucket
+
+    - uploading files from local into bucket:
+            s3cli file.txt s3://my_bucket/file.txt
+
+    - download files from a bucket:
+            s3cli cp s3://my_bucket/file.txt file.txt
+
+    argument parsing is done for you, you need to implement functions:
+    s3_list_bucket
+    s3_download_file
+    s3_upload_file
+"""
 import re
 import argparse
 import logging
