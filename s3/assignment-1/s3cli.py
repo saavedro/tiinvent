@@ -8,7 +8,7 @@
             s3cli ls my_bucket
 
     - uploading files from local into bucket:
-            s3cli file.txt s3://my_bucket/file.txt
+            s3cli cp file.txt s3://my_bucket/file.txt
 
     - download files from a bucket:
             s3cli cp s3://my_bucket/file.txt file.txt
