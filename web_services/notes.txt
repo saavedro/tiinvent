@@ -1,0 +1,19 @@
+http://httpbin.org/#/HTTP_Methods
+GET:
+curl -X GET "http://httpbin.org/get"
+curl -X GET "http://httpbin.org/get?param=value"
+
+POST:
+curl -X POST "http://httpbin.org/post" --data 'key=value' 
+curl -X POST "http://httpbin.org/post" -H "accept: application/json" -H 'Content-Type: application/json' --data '{"key":"value"}'
+curl -X POST "http://httpbin.org/post" -H "accept: application/json" -H 'Content-Type: application/json' --data '{"key":"value", "items":["item1", "item2"]}'
+
+PUT
+curl -X PUT "http://httpbin.org/put" -H "accept: application/json" -H 'Content-Type: application/json' --data '{"key":"new_value"}'
+
+DELETE:
+curl -X DELETE "http://httpbin.org/delete" -H "accept: application/json"
+
+
+Testing REST API: http://dummy.restapiexample.com
+
